@@ -1,52 +1,39 @@
-@keyframes slideInUp {
-  from {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+* {
+    scroll-behavior: smooth;
 }
 
-@keyframes slideInDown {
-  from {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.animate-slide-up {
-  animation: slideInUp 0.5s ease-out forwards;
-}
-
-.animate-slide-down {
-  animation: slideInDown 0.5s ease-out forwards;
-}
-
-/* Style umum */
+html,
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f8f9fa;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+    overflow-x: hidden;
+    font-family: 'Archivo Black';
+    
+}
+@keyframes customBounce {
+    30% {
+        transform: scale(1.2);
+    }
+
+    40%,
+    60% {
+        transform: rotate(-20deg) scale(1.2);
+    }
+
+    50% {
+        transform: rotate(20deg) scale(1.2);
+    }
+
+    70% {
+        transform: rotate(0deg) scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
-.container {
-  width: 80%;
-  margin: auto;
+.about-logos {
+    animation: customBounce 1.5s infinite;
 }
-
-h2 {
-  color: #333;
-}
-
-.content {
-  margin-bottom: 20px;
-  opacity: 0;
+.w-full button:hover .svgg path {
+    fill: black;
 }
